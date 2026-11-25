@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="t">
+  <title id="t">Regata Internacional del Río Negro — isotipo</title>
+  <defs>
+    <clipPath id="rounded"><rect width="512" height="512" rx="76"/></clipPath>
+    <linearGradient id="dark" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#003773"/><stop offset="1" stop-color="#063e80"/></linearGradient>
+    <linearGradient id="mid" x1="0" x2="0.95" y1="0" y2="1"><stop stop-color="#0060bd"/><stop offset="1" stop-color="#0879d9"/></linearGradient>
+    <linearGradient id="light" x1="0" x2=".5" y1="0" y2="1"><stop stop-color="#12adf3"/><stop offset="1" stop-color="#20c0ff"/></linearGradient>
+  </defs>
+  <g clip-path="url(#rounded)">
+    <rect width="512" height="512" fill="url(#dark)"/>
+    <path d="M 278 -35 H 459 L 275 540 H 85 Z" fill="url(#mid)"/>
+    <path d="M 459 -35 H 550 V 545 H 275 Z" fill="url(#light)"/>
+    <path d="M 25 321 L 111 206 C 121 191 134 183 155 183 H 500 C 511 183 514 191 505 203 L 416 324 C 408 335 396 341 378 341 H 33 C 18 341 15 333 25 321 Z" fill="#fff"/>
+    <g fill="#003d7b">
+      <path d="M 118 289 L 401 221 C 407 219 410 227 405 232 L 122 305 Z"/>
+      <ellipse cx="107" cy="300" rx="39" ry="14" transform="rotate(-18 107 300)"/>
+      <ellipse cx="420" cy="225" rx="42" ry="11" transform="rotate(-9 420 225)"/>
+      <circle cx="292" cy="233" r="21"/>
+      <path d="M 282 252 C 290 246 305 248 314 258 C 322 267 330 278 336 291 C 346 308 347 326 341 341 H 289 C 298 324 299 312 288 301 C 278 292 274 280 270 269 Z"/>
+      <path d="M 285 263 C 276 259 258 260 248 265 L 216 280 L 221 291 L 257 279 C 271 277 286 281 299 288 Z"/>
+    </g>
+  </g>
+</svg>
