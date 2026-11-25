@@ -507,6 +507,22 @@ main section[id]{scroll-margin-top:95px}
 /* Galería: fotos sin overlays, etiquetas ni pie descriptivo */
 .gallery-preview::after,.archive-photo::after{display:none!important;}
 </style>
+
+<style id="estilos-documentos-regata-v14">
+.panel-register a.panel-action{text-decoration:none;cursor:pointer}
+.deslinde-card[hidden]{display:none!important}
+.deslinde-card{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:18px 32px;align-items:center;margin-top:4px;padding:26px 30px;background:rgba(255,255,255,.055);border:1px solid rgba(137,192,243,.35);border-left:4px solid #6ccaff;position:relative}
+.deslinde-card .deslinde-label{display:flex;align-items:center;gap:12px;margin-bottom:11px;font:800 10px var(--ui);letter-spacing:.13em;text-transform:uppercase;color:#a8d8fb}
+.deslinde-card .deslinde-icon{display:grid;place-items:center;width:36px;height:42px;flex:none;border:1px solid #89cfff;font:800 13px var(--display);letter-spacing:-.03em;color:#b4e5ff}
+.deslinde-card h3{margin:0 0 6px;font:700 clamp(21px,2.7vw,29px)/1.15 var(--display);letter-spacing:-.055em;color:white}
+.deslinde-card p{margin:0;max-width:660px;font-size:13px;line-height:1.6;color:#bdd3ed}
+.deslinde-card .deslinde-actions{display:flex;gap:9px;flex-wrap:wrap;justify-content:flex-end}
+.deslinde-card .deslinde-btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:44px;padding:11px 14px;border:1px solid #9acbef;color:#edf8ff;background:transparent;text-decoration:none;font:800 10px var(--ui);letter-spacing:.06em;white-space:nowrap;transition:background .2s,color .2s}
+.deslinde-card .deslinde-btn:first-child{background:#d9f1ff;color:#07336a;border-color:#d9f1ff}
+.deslinde-card .deslinde-btn:hover,.deslinde-card .deslinde-btn:focus-visible{background:#79caff;border-color:#79caff;color:#072c62}
+@media(max-width:950px){.deslinde-card{grid-template-columns:1fr;padding:24px}.deslinde-card .deslinde-actions{justify-content:flex-start}}
+@media(max-width:540px){.deslinde-card{padding:20px 18px}.deslinde-card .deslinde-actions{display:grid;grid-template-columns:1fr 1fr;width:100%;gap:8px}.deslinde-card .deslinde-btn{min-width:0;white-space:normal;text-align:center;font-size:9px;padding:11px 8px}.deslinde-card h3{font-size:22px}}
+</style>
 </head>
 <body>
 <div class="preheader"></div>
@@ -561,9 +577,9 @@ main section[id]{scroll-margin-top:95px}
       <article class="participate-panel panel-register reveal">
         <div class="panel-top"><span>Para palistas y delegaciones</span><span class="panel-tag">Inscripciones 2027</span></div>
         <div class="panel-symbol" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 38V14a6 6 0 0 1 6-6h14l12 12v18a3 3 0 0 1-3 3H11a3 3 0 0 1-3-3Z"/><path d="M28 8v12h12M16 26h16M16 33h12"/></svg></div>
-        <div class="panel-body"><h3>Inscripciones</h3><p>Participá de la 51.ª Regata Internacional del Río Negro. La inscripción se realizará en la plataforma externa habilitada por la organización.</p>
-        <div class="panel-detail"><span>Acceso oficial</span><strong>Enlace pendiente de incorporar</strong></div>
-        <button type="button" class="panel-action" onclick="pending('inscripciones')">Ir a inscripciones <span aria-hidden="true">↗</span></button></div>
+        <div class="panel-body"><h3>Inscripciones</h3><p>Participá de la 51.ª Regata Internacional del Río Negro. Completá tu inscripción en la plataforma de Cronometraje Instantáneo habilitada para esta edición.</p>
+        <div class="panel-detail"><span>Acceso oficial</span><strong>Plataforma de inscripción habilitada</strong></div>
+        <a class="panel-action" href="https://cronometrajeinstantaneo.com/sitios/51-regata-internacional-del-rio-negro" target="_blank" rel="noopener noreferrer">Ir a inscripciones <span aria-hidden="true">↗</span></a></div>
       </article>
       <article class="participate-panel panel-times reveal" id="tiempos">
         <div class="panel-top"><span>La competencia, jornada a jornada</span><span class="panel-tag">Seguimiento oficial</span></div>
@@ -573,7 +589,7 @@ main section[id]{scroll-margin-top:95px}
         <button type="button" class="panel-action" onclick="pending('tiempos')">Consultar tiempos <span aria-hidden="true">↗</span></button></div>
       </article>
     </div>
-    <p class="participate-footnote reveal">Los accesos a inscripción y tiempos abrirán las plataformas oficiales correspondientes cuando la organización facilite los enlaces.</p>
+    <p class="participate-footnote reveal">Las inscripciones ya están disponibles en la plataforma oficial. Los tiempos se incorporarán cuando esté habilitado su seguimiento.</p>
   </div>
 </section>
 
@@ -635,6 +651,18 @@ main section[id]{scroll-margin-top:95px}
   <div class="pdfcard reveal" role="group" aria-label="Reglamento oficial 2027"><div class="pdfcard-top"><div class="pdf-icon">PDF</div><span class="doc-flag">DOCUMENTO OFICIAL</span></div><div class="pdf-foot"><div><strong>Reglamento<br>2027.</strong><br><small>51.ª edición · Documento íntegro<br>12 páginas</small></div><span class="doc-arrow">↗</span></div>
     <div class="reg-dates"><p>PERÍODOS DE INSCRIPCIÓN</p><div><span>20 NOV – 20 DIC 2026</span><strong>$160.000</strong></div><div><span>21 DIC – 6 ENE 2027</span><strong>$200.000</strong></div><small>Valores establecidos en el punto 6.1 del reglamento 2027.</small></div>
   </div>
+
+  <article class="deslinde-card reveal" id="deslinde-card" aria-labelledby="deslinde-title" hidden>
+    <div class="deslinde-copy">
+      <div class="deslinde-label"><span class="deslinde-icon" aria-hidden="true">PDF</span> 51.ª edición · Documento para participantes</div>
+      <h3 id="deslinde-title">Deslinde de Responsabilidad</h3>
+      <p>Formulario oficial de dos páginas. Descargalo para completar y firmar, y presentalo según las indicaciones de inscripción.</p>
+    </div>
+    <div class="deslinde-actions">
+      <a class="deslinde-btn" href="docs/Deslinde_de_Responsabilidad_Regata_2027.pdf" target="_blank" rel="noopener noreferrer">Ver documento <span aria-hidden="true">↗</span></a>
+      <a class="deslinde-btn" href="docs/Deslinde_de_Responsabilidad_Regata_2027.pdf" download="Deslinde_de_Responsabilidad_Regata_2027.pdf">Descargar PDF <span aria-hidden="true">↓</span></a>
+    </div>
+  </article>
 </div></section>
 <section class="gallery" id="multimedia" aria-labelledby="media-title"><div class="shell">
   <div class="section-heading reveal"><div><div class="eyebrow">La Regata en imágenes</div><h2 id="media-title">Momentos <em>en el río.</em></h2></div><p class="intro-note">Competencia, paisajes y personas que forman parte de la Regata. Una selección de fotografías para descubrir la experiencia desde distintos puntos de vista.</p></div>
@@ -765,5 +793,22 @@ const reduceMotion=matchMedia('(prefers-reduced-motion: reduce)').matches;
 if('IntersectionObserver' in window){const revealObserver=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');revealObserver.unobserve(e.target)}})},{threshold:.07});document.querySelectorAll('.reveal').forEach((el,i)=>{if(!reduceMotion && i%3===1)el.style.transitionDelay='.09s';revealObserver.observe(el)});}else{document.querySelectorAll('.reveal').forEach(el=>el.classList.add('in'))}
 const header=document.getElementById('site-header');window.addEventListener('scroll',()=>header.classList.toggle('scrolled',window.scrollY>70),{passive:true});
 if('IntersectionObserver' in window){const links=[...document.querySelectorAll('.desktopnav a')];const sections=[...document.querySelectorAll('main section[id]')];const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)links.forEach(l=>l.classList.toggle('active',l.getAttribute('href')==='#'+e.target.id))})},{rootMargin:'-24% 0px -67% 0px'});sections.forEach(s=>io.observe(s))}
+</script>
+
+<script id="activar-deslinde-regata-v14">
+(function(){
+  // El acceso se activa únicamente cuando el PDF real ya está publicado en /docs/.
+  const card=document.getElementById('deslinde-card');
+  if(!card)return;
+  fetch('docs/Deslinde_de_Responsabilidad_Regata_2027.pdf',{method:'HEAD',cache:'no-store'}).then(response=>{
+    if(response.ok && /application\/pdf/i.test(response.headers.get('Content-Type')||'')){
+      card.hidden=false;
+      if('IntersectionObserver' in window){
+        // Las animaciones del sitio observan elementos "reveal" al cargar.
+        card.classList.add('visible');
+      }
+    }
+  }).catch(()=>{});
+})();
 </script>
 </body></html>
