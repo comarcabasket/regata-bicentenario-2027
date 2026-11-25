@@ -652,7 +652,7 @@ main section[id]{scroll-margin-top:95px}
     <div class="reg-dates"><p>PERÍODOS DE INSCRIPCIÓN</p><div><span>20 NOV – 20 DIC 2026</span><strong>$160.000</strong></div><div><span>21 DIC – 6 ENE 2027</span><strong>$200.000</strong></div><small>Valores establecidos en el punto 6.1 del reglamento 2027.</small></div>
   </div>
 
-  <article class="deslinde-card reveal" id="deslinde-card" aria-labelledby="deslinde-title" hidden>
+  <article class="deslinde-card reveal" id="deslinde-card" aria-labelledby="deslinde-title">
     <div class="deslinde-copy">
       <div class="deslinde-label"><span class="deslinde-icon" aria-hidden="true">PDF</span> 51.ª edición · Documento para participantes</div>
       <h3 id="deslinde-title">Deslinde de Responsabilidad</h3>
@@ -795,20 +795,4 @@ const header=document.getElementById('site-header');window.addEventListener('scr
 if('IntersectionObserver' in window){const links=[...document.querySelectorAll('.desktopnav a')];const sections=[...document.querySelectorAll('main section[id]')];const io=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)links.forEach(l=>l.classList.toggle('active',l.getAttribute('href')==='#'+e.target.id))})},{rootMargin:'-24% 0px -67% 0px'});sections.forEach(s=>io.observe(s))}
 </script>
 
-<script id="activar-deslinde-regata-v14">
-(function(){
-  // El acceso se activa únicamente cuando el PDF real ya está publicado en /docs/.
-  const card=document.getElementById('deslinde-card');
-  if(!card)return;
-  fetch('docs/Deslinde_de_Responsabilidad_Regata_2027.pdf',{method:'HEAD',cache:'no-store'}).then(response=>{
-    if(response.ok && /application\/pdf/i.test(response.headers.get('Content-Type')||'')){
-      card.hidden=false;
-      if('IntersectionObserver' in window){
-        // Las animaciones del sitio observan elementos "reveal" al cargar.
-        card.classList.add('in');
-      }
-    }
-  }).catch(()=>{});
-})();
-</script>
 </body></html>
