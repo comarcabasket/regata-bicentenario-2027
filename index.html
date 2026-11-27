@@ -663,6 +663,18 @@ main section[id]{scroll-margin-top:95px}
     <div class="reg-dates"><p>PERÍODOS DE INSCRIPCIÓN</p><div><span>20 NOV – 20 DIC 2026</span><strong>$160.000</strong></div><div><span>21 DIC – 6 ENE 2027</span><strong>$200.000</strong></div><small>Valores establecidos en el punto 6.1 del reglamento 2027.</small></div>
   </div>
 
+  <article class="deslinde-card reveal" id="anexo-card" aria-labelledby="anexo-title">
+    <div class="deslinde-copy">
+      <div class="deslinde-label"><span class="deslinde-icon" aria-hidden="true">PDF</span><span class="deslinde-kicker">51.ª edición · Documento complementario</span></div>
+      <h3 id="anexo-title">Anexo I al Reglamento</h3>
+      <p>Disposiciones complementarias sobre modalidades de largada, categoría Touring y árbitros de maratón. Documento oficial de 3 páginas.</p>
+    </div>
+    <div class="deslinde-actions">
+      <button type="button" class="deslinde-btn" onclick="openAnexo()" aria-haspopup="dialog">Leer Anexo I <span aria-hidden="true">↗</span></button>
+      <a class="deslinde-btn" href="docs/Anexo_I_al_Reglamento_Regata_Rio_Negro_2027.pdf" download="Anexo_I_al_Reglamento_Regata_Rio_Negro_2027.pdf">Descargar PDF <span aria-hidden="true">↓</span></a>
+    </div>
+  </article>
+
   <article class="deslinde-card reveal" id="deslinde-card" aria-labelledby="deslinde-title">
     <div class="deslinde-copy">
       <div class="deslinde-label"><span class="deslinde-icon" aria-hidden="true">PDF</span><span class="deslinde-kicker">51.ª edición · Documento para participantes</span></div>
@@ -777,6 +789,7 @@ let pdfUrl=null;
 function getPdfUrl(){if(pdfUrl)return pdfUrl;const data=document.getElementById('embedded-regulation').textContent.trim();const binary=atob(data);const bytes=new Uint8Array(binary.length);for(let i=0;i<binary.length;i++)bytes[i]=binary.charCodeAt(i);pdfUrl=URL.createObjectURL(new Blob([bytes],{type:'application/pdf'}));return pdfUrl}
 // Los dos documentos oficiales usan el mismo visor interno, sin salir de la página.
 const DESLINDE_PDF='docs/Deslinde_de_Responsabilidad_Regata_2027.pdf';
+const ANEXO_PDF='docs/Anexo_I_al_Reglamento_Regata_Rio_Negro_2027.pdf';
 function showPdfDocument(title,url,pages,downloadAction){
  const modal=document.getElementById('regulation-modal');
  const frame=document.getElementById('pdf-frame');
@@ -789,6 +802,8 @@ function showPdfDocument(title,url,pages,downloadAction){
 }
 function openRegulation(){showPdfDocument('Reglamento 2027.',getPdfUrl(),12,downloadRegulation)}
 function downloadRegulation(){const a=document.createElement('a');a.href=getPdfUrl();a.download='Reglamento_Regata_Rio_Negro_2027.pdf';document.body.appendChild(a);a.click();a.remove()}
+function openAnexo(){showPdfDocument('Anexo I al Reglamento',ANEXO_PDF,3,downloadAnexo)}
+function downloadAnexo(){const a=document.createElement('a');a.href=ANEXO_PDF;a.download='Anexo_I_al_Reglamento_Regata_Rio_Negro_2027.pdf';document.body.appendChild(a);a.click();a.remove()}
 function openDeslinde(){showPdfDocument('Deslinde de Responsabilidad',DESLINDE_PDF,2,downloadDeslinde)}
 function downloadDeslinde(){const a=document.createElement('a');a.href=DESLINDE_PDF;a.download='Deslinde_de_Responsabilidad_Regata_2027.pdf';document.body.appendChild(a);a.click();a.remove()}
 function closeRegulation(){hideModal('regulation-modal')}
